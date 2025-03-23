@@ -1,0 +1,110 @@
+:root{
+    --primary-color: #f3f3f3;
+    --secondary-color: green;
+    --accent-color: yellow;
+    --text-color: color: gray;
+}
+
+body {
+    background-image: url('../img/libraryBg.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: var(--secondary-color);
+}
+
+.navbar-brand span {
+    color: #ffffff; /* 10% Accent */
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #ffffff !important; /* 10% Accent */
+    transition: color 0.3s ease;
+}
+
+.nav-item{
+    padding: 0 1rem;
+}
+.nav-item.active{
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.nav-link:hover {
+    color: #d9d9d9 !important;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('library2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    color: #ffffff; /* 10% Accent */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff; /* 10% Accent */
+}
+
+.card-accent {
+    background-color: var(--accent-color);
+}
+.card-accent * {
+    color: var(--text-color);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+/* Secondary Background for Mission/Vision */
+
+/* Accent Color for Headings */
+.text-secondary {
+    color: #333333 !important; /* Darker gray for contrast */
+}
+
+
+/* Footer */
+footer {
+    background-color: #05985e; /* 60% Primary */
+}
+
+/* Whitespace and Balance */
+.container {
+    max-width: 1200px;
+}
+
+.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}

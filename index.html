@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISPSC Tagudin Campus Library - Brief History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/img-slider.css">
+
+    <!-- Jquery Import -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script src="js/image-slider.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="https://www.ispsctagudin.info/library">
+                <img src="img/school-logo.png" alt="School Logo" class="logo me-2">
+                <span class="fs-5 fs-lg-2">ISPSC Tagudin Campus <br /> Library</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">E-Resources</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="e-books.html">E-Books</a></li>
+                            <li><a class="dropdown-item" href="e-journals.html">E-Journals</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to ISPSC Tagudin Campus Library</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="slider-wrapper">
+            <div class="image-slider">
+                <div class="slider-images">
+                    <div class="image-wrapper"><img src="img/img-slider/1.jpg" alt="Image 1"></div>
+                    <div class="image-wrapper"><img src="img/img-slider/2.jpg" alt="Image 2"></div>
+                    <div class="image-wrapper"><img src="img/img-slider/3.jpg" alt="Image 3"></div>
+                    <div class="image-wrapper"><img src="img/img-slider/4.jpg" alt="Image 4"></div>
+                    <div class="image-wrapper"><img src="img/img-slider/5.jpg" alt="Image 5"></div>
+                </div>
+            </div>
+            <div class="mobile-buttons">
+                <button class="btn btn-primary prev">Previous</button>
+                <button class="btn btn-primary mx-2 next">Next</button>
+            </div>
+            <div class="navigation">
+                <button class="arrow left-arrow">←</button>
+                <button class="arrow right-arrow">→</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Include jQuery and the JS file -->
+
+    <!-- Footer -->
+    <footer class=" mt-5 text-white text-center py-3">
+        <p class="mb-0">© 2025 ISPSC Tagudin Campus Library. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

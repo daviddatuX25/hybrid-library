@@ -1,0 +1,104 @@
+/* Container for the slider */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Flex container for images */
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Wrapper for each image */
+.image-wrapper {
+    flex: 0 0 30%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    max-width: 400px;
+    max-height: 225px;
+}
+
+/* Image styling */
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Active image styling */
+.image-wrapper.active img {
+    transform: scale(1.1);
+}
+
+/* Navigation layer */
+.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* Navigation arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    pointer-events: auto;
+    z-index: 20;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Mobile navigation buttons */
+.mobile-buttons {
+    display: none;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .image-wrapper {
+        flex: 0 0 100%;
+        max-width: 100%;
+        max-height: none;
+    }
+    .image-wrapper.active img {
+        transform: scale(1);
+    }
+    .arrow {
+        display: none;
+    }
+    .mobile-buttons {
+        display: flex;
+    }
+}
