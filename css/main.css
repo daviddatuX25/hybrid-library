@@ -1,8 +1,18 @@
 :root{
     --primary-color: #f3f3f3;
     --secondary-color: green;
+    --secondary-color-gradient: #99c492;
     --accent-color: yellow;
-    --text-color: color: gray;
+    --text-color: #2c3e50;
+
+    /* Upcomming Events */
+    --card-width: 320px;
+    --num-cards: 4;
+    --animation-duration: 25s;
+    --event-bg-start: rgba(34, 177, 76, 0.95);
+    --event-bg-end: rgba(212, 245, 192, 0.85);
+    --event-accent: #ffcc00;
+    --event-text: #2c3e50;;
 }
 
 body {
@@ -11,25 +21,36 @@ body {
     background-position: center;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    box-sizing: border-box;
 }
 
 
 /* Navbar */
 .navbar {
-    background-color: var(--secondary-color);
+    background-color: rgb(1, 173, 13);
 }
 
 .navbar-brand span {
-    color: #ffffff; /* 10% Accent */
+    color: white;
+    text-shadow: 2px 2px 2px var(--text-color);
     font-size: 1.75rem;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .nav-link {
-    color: #ffffff !important; /* 10% Accent */
+    color: var(--text-color);
+    font-weight: bold;
+
     transition: color 0.3s ease;
 }
-
+.dropdown-item.active {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+.dropdown-item:hover{
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
 .nav-item{
     padding: 0 1rem;
 }
@@ -57,10 +78,26 @@ body {
 }
 
 /* Card Styling */
+/* Card Styling */
 .card {
+    color: var(--event-text);
     border: none;
-    border-radius: 10px;
-    background-color: #ffffff; /* 10% Accent */
+    border-radius: 0 40px 40px 40px;
+    background: rgb(7,140,16);
+    background: linear-gradient(
+        to bottom,  
+        rgba(34, 177, 76, 1) 10%,  /* Medium Green */
+        rgba(102, 204, 102, 1) 35%, /* Fresh Green */
+        rgba(168, 224, 159, 1) 65%, /* Light Green */
+        rgba(212, 245, 192, 1) 100% /* Very Light Green */
+    );
+    
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .card-accent {
@@ -78,6 +115,10 @@ body {
     text-align: justify;
 }
 
+.card-img {
+    width: 200px;
+    margin: 0 auto;
+}
 /* Secondary Background for Mission/Vision */
 
 /* Accent Color for Headings */
@@ -85,10 +126,53 @@ body {
     color: #333333 !important; /* Darker gray for contrast */
 }
 
+.text-shadow {
+    color: white;
+    text-shadow: 3px 3px 11px black;
+}
+
+/* Person Avatars */
+/*
+ * MAIN CONTENT
+ */
+ .avatar {
+    border: 5px solid white;
+    box-sizing: border-box;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    width: 200px;
+  }
+  .avatar__image {
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+  }
+  .avatar::before, .avatar::after {
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-top: 5px solid var(--accent-color);
+    content: "";
+    display: block;
+    height: calc(100% + 10px);
+    left: 50%;
+    width: calc(100% + 10px);
+    position: absolute;
+  }
+  .avatar::before {
+    top: -10px;
+    transform: translateX(-50%);
+  }
+  .avatar::after {
+    bottom: -10px;
+    transform: translateX(-50%) rotate(180deg);
+  }
+  
 
 /* Footer */
 footer {
-    background-color: #05985e; /* 60% Primary */
+    background-color: var(--secondary-color); /* 60% Primary */
 }
 
 /* Whitespace and Balance */
@@ -107,4 +191,158 @@ footer {
 
 .shadow-sm {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Upcomming Events Styling */
+.events-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-section-title {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+/* Marquee Container */
+.marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.marquee-inner {
+    display: flex;
+    width: calc(var(--card-width) * var(--num-cards) * 2);
+    animation: marquee var(--animation-duration) linear infinite;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Event Card Styling */
+.event-card {
+    width: var(--card-width);
+    margin: 0 15px;
+    padding: 25px;
+    background: linear-gradient(145deg, var(--event-bg-start), var(--event-bg-end));
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--event-accent);
+    z-index: 1;
+}
+
+.event-icon {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.event-icon i {
+    font-size: 2.5rem;
+    color: var(--event-accent);
+    transition: transform 0.3s ease;
+}
+
+.event-title {
+    font-size: 1.5rem;
+    color: var(--event-text);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.event-date, .event-time {
+    font-size: 0.95rem;
+    color: var(--event-text);
+    margin-bottom: 8px;
+}
+
+.event-date span, .event-time span {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+.event-desc {
+    font-size: 1rem;
+    color: var(--event-text);
+    opacity: 0.9;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.event-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: black;
+    box-shadow: 2px 2px 5px green;
+    text-decoration: none;
+    border: 2px solid var(--event-accent);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effects */
+.marquee-wrapper:hover .marquee-inner {
+    animation-play-state: paused;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.event-card:hover .event-icon i {
+    transform: scale(1.2);
+}
+
+.event-card:hover .event-link {
+    background: var(--event-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --card-width: 250px;
+    }
+    .event-section-title {
+        font-size: 2rem;
+    }
+    .event-card {
+        padding: 20px;
+    }
+    .event-icon i {
+        font-size: 2rem;
+    }
+}
+
+/* Button Styling */
+.events-btn {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+    background-color: var(--secondary-color-gradient) ;
+}
+
+.events-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color-gradient) ;
 }

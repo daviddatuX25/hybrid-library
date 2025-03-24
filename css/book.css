@@ -737,5 +737,18 @@ li.bookImageBg{
     align-items: center;
 
 }
+.book--paperback .page > li:nth-child(5){
+	background: rgb(7,140,16);
+    background: linear-gradient(
+		to bottom, 
+		rgba(7, 140, 16, 1) 10%,  /* Dark Green */
+		rgba(34, 177, 76, 1) 35%, /* Medium Green */
+		rgba(127, 197, 140, 1) 65%, /* Light Green */
+		rgba(168, 224, 159, 1) 100% /* Very Light Green */
+		);
+}
+.book--paperback .book_spine li:nth-child(1){
+	background-color: var(--accent-color);
+}
 
 /* Front part of Paperback books */

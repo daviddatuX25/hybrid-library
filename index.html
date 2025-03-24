@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
+    <script src="js/events-marque.js" defer></script>
     <script src="js/image-slider.js" defer></script>
 </head>
 <body>
@@ -53,6 +54,7 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Photo Slider -->
         <div class="slider-wrapper">
             <div class="image-slider">
                 <div class="slider-images">
@@ -72,6 +74,90 @@
                 <button class="arrow right-arrow">→</button>
             </div>
         </div>
+
+       <!-- Upcoming Events Section -->
+        <section class="container-fluid p-5 mt-5 events-section">
+            <h1 class="display-4 fw-bold text-center event-section-title text-shadow">Upcomming Events</h1>
+            <div class="marquee-wrapper">
+                <div class="marquee-inner">
+                    <!-- Event 1 -->
+                    <div class="event-card">
+                        <div class="event-icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <h3 class="event-title">Library Orientation 2025</h3>
+                        <p class="event-date"><span>Date:</span> April 10, 2025</p>
+                        <p class="event-time"><span>Time:</span> 9:00 AM - 12:00 PM</p>
+                        <p class="event-desc">Discover the library’s treasures and unlock a world of resources.</p>
+                        <a href="#" class="event-link">Explore More</a>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="event-card">
+                        <div class="event-icon"><i class="fas fa-book-open"></i></div>
+                        <h3 class="event-title">Book Fair Extravaganza</h3>
+                        <p class="event-date"><span>Date:</span> April 15-17, 2025</p>
+                        <p class="event-time"><span>Time:</span> 8:00 AM - 5:00 PM</p>
+                        <p class="event-desc">Dive into a sea of books at unbeatable prices.</p>
+                        <a href="#" class="event-link">Explore More</a>
+                    </div>
+                    <!-- Event 3 -->
+                    <div class="event-card">
+                        <div class="event-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3 class="event-title">Research Workshop</h3>
+                        <p class="event-date"><span>Date:</span> April 22, 2025</p>
+                        <p class="event-time"><span>Time:</span> 1:00 PM - 4:00 PM</p>
+                        <p class="event-desc">Illuminate your research skills with expert guidance.</p>
+                        <a href="#" class="event-link">Explore More</a>
+                    </div>
+                    <!-- Event 4 -->
+                    <div class="event-card">
+                        <div class="event-icon"><i class="fas fa-microphone"></i></div>
+                        <h3 class="event-title">Author Talk Series</h3>
+                        <p class="event-date"><span>Date:</span> May 5, 2025</p>
+                        <p class="event-time"><span>Time:</span> 2:00 PM - 3:30 PM</p>
+                        <p class="event-desc">Hear stories straight from the authors’ voices.</p>
+                        <a href="#" class="event-link">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn events-btn">See All Events </See></a>
+            </div>
+        </section>
+        
+        <!-- Brief History Section -->
+        <section class="container-fluid p-5 mt-5git">
+            <section class="row align-items-center mb-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="img/is.jpg" alt="ISPSC Campus" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title mb-4">Brief History</h2>
+                            <p class="card-text">The Ilocos Sur Polytechnic State College (ISPSC) was created on February 24, 1998 by virtue of R.A. 8547 authored by Congressman Eric D. Singson and signed into law by President Fidel V. Ramos. It is a comprehensive multi-campus institution of higher learning with its main campus in Sta. Maria, Ilocos Sur. Originally, it had eight (8) campuses spread in the second district of Ilocos Sur.</p>
+                            <p class="card-text">Only six (6) campuses have remained. Other campuses were reverted back to the Department of Education. The main campus was formerly Ilocos Sur Agricultural College, which had its early beginnings as a farm school in 1913 and polytechnic college on March 29, 1995 by virtue of R.A. 7960.</p>
+                            <p class="card-text">The six remaining campuses of ISPSC System are divided into two clusters, the North Cluster and South Cluster. The South Cluster is comprised of the campuses of Tagudin, Cervantes, and Candon. The North Cluster includes Santiago campus, the Narvacan campus considered as the Provincial Institute of Fisheries, and the Sta. Maria Campus wherein the Provincial Institute of Agriculture is also instituted.</p>
+                            <p class="card-text">The latter serves as the main campus and the seat of the Central Administration. The series of metamorphosis which the College went through has brought impetus and challenges to continually develop and improve its programs and services.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Mission & Vision Section -->
+            <section class="row align-items-center ">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="img/VM.jpg" alt="Mission & Vision" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-8">
+                    <div class="card shadow-sm card-accent">
+                        <div class="card-body">
+                            <h2 class="card-title text-accent mb-2">Mission</h2>
+                            <p class="card-text">To improve the lives of people and communities through quality instruction, innovations, productivity initiatives, environment and industry-feasible technologies, resource mobilization and transformation outreach programs and services.</p>
+                            <h2 class="card-title text-accent mb-2">Vision</h2>
+                            <p class="card-text">A vibrant and nurturing Polytechnic Service College for transforming lives and communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
     
     <!-- Include jQuery and the JS file -->
